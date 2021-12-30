@@ -1,0 +1,30 @@
+{
+  "name": "cashchain",
+  "version": "1.0.0",
+  "description": "My economy in a blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marrubio/cashchain.git"
+  },
+  "keywords": [
+    "Blockchain",
+    "node",
+    "javascript"
+  ],
+  "author": "marugi@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marrubio/cashchain/issues"
+  },
+  "homepage": "https://github.com/marrubio/cashchain#readme",
+  "dependencies": {
+    "body-parser": "^1.5.1",
+    "crypto-js": "^4.1.1",
+    "express": "^4.7.1",
+    "method-override": "^2.1.2"
+  }
+}
