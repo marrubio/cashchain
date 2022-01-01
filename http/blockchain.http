@@ -2,6 +2,6 @@ POST http://localhost:3000/blockchain HTTP/1.1
 content-type: application/json
 
 {
-    "blockchain": "MyBlockchain2",
-    "pattern": "123"
+    "blockchain": "MyBlockchain",
+    "pattern": "00"
 }

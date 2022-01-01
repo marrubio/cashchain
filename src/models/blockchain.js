@@ -1,50 +1,39 @@
 var SHA256 = require("crypto-js/sha256");
-
-class Block {
-
-  constructor(data) {
-      this.id = id;
-      this.name = name; 
-      this.nonce = 0;     
-      this.hash =  SHA256(id+name).toString()
-      this.parenthash
-      this.data = data;
-  }
-
-  info() {
-      return `${this.id} ${this.name}, ${this.proof}`;
-  }
-}
+const MaximumNonce = 100000;
+const Block = require('./block.js');
 
 class Blockchain {
 
-  constructor(id, name,pattern) {
+  constructor(id, name, pattern) {
       this.id = id;
-      this.name = name;
-      this.maximumNonce = 100000;  
-      this.hash =  this.mine(pattern);
+      this.name = name;      
+      this.pattern = pattern;
+      this.hash =  this.mineChain(pattern);
       this.count = 0;
-      this.chain = [];            
+      this.datablock= [];      
+      this.add(new Block(this.hash, pattern, "Genesis Block"));            
   }
 
-  add(block){
-    this.chain[count] = block;
+  add(block){    
+    this.datablock[this.count] = block;    
+    this.count++;
   }
 
   info() {
-      return `${this.id} ${this.name}, ${this.hash}`;
+      return this.hash;
   }
 
-  mine(pattern){
+  mineChain(pattern){
 
-    console.log("Minando Blockchain.....");
-    for (var x = 0; x <= this.maximumNonce; x++) {
+    console.log("Blockchain mining.....");
+    for (var x = 0; x <= MaximumNonce; x++) {
       
       var hashtmp = SHA256(this.id + this.name + x).toString();
-      console.log("nonce: " + x + " hash:" + hashtmp);
+      
 
       if(hashtmp.substring(0,pattern.length) === pattern){
         this.nonce = x;
+        console.log("Chain mined nonce: " + x + " hash:" + hashtmp);
         return hashtmp;
       }      
     }
