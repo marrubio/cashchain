@@ -25,6 +25,7 @@
     "body-parser": "^1.5.1",
     "crypto-js": "^4.1.1",
     "express": "^4.7.1",
-    "method-override": "^2.1.2"
+    "method-override": "^2.1.2",
+    "secp256k1": "^4.0.2"
   }
 }

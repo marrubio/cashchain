@@ -1,0 +1,7 @@
+POST http://localhost:3000/hash HTTP/1.1
+content-type: application/json
+
+{    
+    "message": "AitHrHxgRXZKRVIXcPAi6yxhd8ITqvcdZ0lFRckD9m5v",
+    "messageB64": "AitHrHxgRXZKRVIXcPAi6yxhd8ITqvcdZ0lFRckD9m5v"
+}

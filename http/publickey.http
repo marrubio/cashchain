@@ -1,0 +1,6 @@
+POST http://localhost:3000/publickey HTTP/1.1
+content-type: application/json
+
+{    
+    "privateKey": "eLwOtZnKqBzixnbEb4GN40hFEMAjoqDXhTM+9kvrt28="
+}
